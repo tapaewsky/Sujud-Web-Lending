@@ -34,7 +34,7 @@ export default function Footer() {
               Условия использования
             </a>
             <span className="text-white/[0.1]">·</span>
-            <a href="#" className="text-xs text-[#8A8F98] hover:text-[#EDEDEF] transition-colors duration-200">
+            <a href="mailto:sujudapp@mail.ru" className="text-xs text-[#8A8F98] hover:text-[#EDEDEF] transition-colors duration-200">
               Контакты
             </a>
           </div>

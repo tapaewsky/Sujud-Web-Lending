@@ -28,7 +28,7 @@ export default function Navbar() {
     >
       <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2.5 group">
+        <a href="/" className="flex items-center gap-2.5 group">
           <div className="w-9 h-9 rounded-[14px] overflow-hidden shadow-[0_0_16px_rgba(48,209,88,0.4)] group-hover:shadow-[0_0_24px_rgba(48,209,88,0.65)] transition-all duration-300 flex-shrink-0">
             <img
               src="/logo.png"
