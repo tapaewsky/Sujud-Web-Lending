@@ -1,0 +1,210 @@
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Политика конфиденциальности — Sujud",
+  description: "Политика конфиденциальности приложения Sujud.",
+};
+
+const sections = [
+  {
+    number: "1",
+    title: "Общие положения",
+    content: (
+      <p>
+        Приложение Sujud («мы», «нас», «наш») уважает вашу конфиденциальность. В данной Политике конфиденциальности описано, какие данные мы собираем и как их используем при использовании приложения.
+      </p>
+    ),
+  },
+  {
+    number: "2",
+    title: "Какие данные мы собираем",
+    content: (
+      <div className="flex flex-col gap-6">
+        <div>
+          <h3 className="text-sm font-semibold text-[#EDEDEF] mb-2">2.1 Вход через Apple</h3>
+          <p className="mb-3">Мы используем Sign in with Apple для авторизации. При входе мы можем получать:</p>
+          <ul>
+            <li>Уникальный анонимный идентификатор пользователя</li>
+            <li>Адрес электронной почты (только если вы разрешили его передачу)</li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="text-sm font-semibold text-[#EDEDEF] mb-2">2.2 Данные о местоположении</h3>
+          <p className="mb-3">Мы можем получать данные о вашем местоположении для:</p>
+          <ul>
+            <li>Отображения ближайших мечетей и молельных комнат</li>
+            <li>Улучшения результатов поиска</li>
+          </ul>
+          <p className="mt-3 text-[#8A8F98]/80 text-sm border-l-2 border-[#30D158]/40 pl-3">
+            Данные о местоположении используются только внутри приложения и не передаются третьим лицам.
+          </p>
+        </div>
+        <div>
+          <h3 className="text-sm font-semibold text-[#EDEDEF] mb-2">2.3 Пользовательский контент</h3>
+          <p className="mb-2">Пользователи могут добавлять новые мечети и молельные комнаты.</p>
+          <p>Мы не гарантируем точность, полноту или актуальность информации, добавленной пользователями.</p>
+        </div>
+      </div>
+    ),
+  },
+  {
+    number: "3",
+    title: "Использование данных",
+    content: (
+      <>
+        <p className="mb-3">Мы используем собранные данные исключительно для:</p>
+        <ul>
+          <li>Работы и улучшения приложения</li>
+          <li>Отображения релевантного контента</li>
+          <li>Обеспечения авторизации пользователей</li>
+        </ul>
+      </>
+    ),
+  },
+  {
+    number: "4",
+    title: "Передача данных третьим лицам",
+    content: (
+      <>
+        <p className="mb-2">Мы не продаём и не передаём ваши персональные данные третьим лицам.</p>
+        <p>Данные могут обрабатываться сервисами Apple в рамках работы функции авторизации.</p>
+      </>
+    ),
+  },
+  {
+    number: "5",
+    title: "Хранение данных",
+    content: (
+      <p>Мы храним данные только столько, сколько необходимо для работы приложения.</p>
+    ),
+  },
+  {
+    number: "6",
+    title: "Безопасность",
+    content: (
+      <p>Мы принимаем разумные меры для защиты ваших данных, однако не можем гарантировать абсолютную безопасность.</p>
+    ),
+  },
+  {
+    number: "7",
+    title: "Права пользователей",
+    content: (
+      <>
+        <p className="mb-3">Вы имеете право:</p>
+        <ul>
+          <li>Запросить удаление своих данных</li>
+          <li>Связаться с нами по вопросам конфиденциальности</li>
+        </ul>
+      </>
+    ),
+  },
+  {
+    number: "8",
+    title: "Контакты",
+    content: (
+      <div className="flex items-center gap-3">
+        <div className="w-9 h-9 rounded-xl bg-[#30D158]/10 border border-[#30D158]/20 flex items-center justify-center flex-shrink-0">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#30D158" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+            <rect x="2" y="4" width="20" height="16" rx="2" />
+            <path d="m22 7-10 7L2 7" />
+          </svg>
+        </div>
+        <div>
+          <p className="text-xs text-[#8A8F98] mb-0.5">Если у вас есть вопросы, свяжитесь с нами:</p>
+          <a
+            href="mailto:sujudapp@mail.ru"
+            className="text-sm text-[#30D158] hover:text-[#34D862] transition-colors duration-200 font-medium"
+          >
+            sujudapp@mail.ru
+          </a>
+        </div>
+      </div>
+    ),
+  },
+  {
+    number: "9",
+    title: "Изменения политики",
+    content: (
+      <p>Мы можем обновлять данную Политику конфиденциальности. Актуальная версия всегда доступна по этой странице.</p>
+    ),
+  },
+];
+
+export default function PrivacyPage() {
+  return (
+    <div className="min-h-screen bg-[#020203]">
+      <Navbar />
+
+      <main className="relative pt-32 pb-24 px-6 overflow-hidden">
+        {/* Background glow */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div
+            className="absolute top-0 left-1/2 -translate-x-1/2"
+            style={{
+              width: "600px",
+              height: "400px",
+              background: "radial-gradient(ellipse, rgba(48,209,88,0.06) 0%, transparent 70%)",
+              filter: "blur(80px)",
+            }}
+          />
+        </div>
+
+        <div className="relative max-w-3xl mx-auto">
+          {/* Header */}
+          <div className="mb-12">
+            <span className="inline-block text-xs font-mono tracking-widest text-[#30D158] uppercase mb-4 border border-[#30D158]/30 rounded-full px-3 py-1 bg-[#30D158]/10">
+              Юридическая информация
+            </span>
+            <h1 className="text-3xl md:text-4xl font-semibold tracking-tight text-[#EDEDEF] mb-3">
+              Политика конфиденциальности
+            </h1>
+            <p className="text-sm text-[#8A8F98]">
+              Дата последнего обновления: <span className="text-[#EDEDEF]/70">28.03.2026</span>
+            </p>
+          </div>
+
+          <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent mb-12" />
+
+          {/* Sections */}
+          <div className="flex flex-col gap-6">
+            {sections.map((section) => (
+              <div
+                key={section.number}
+                className="group rounded-2xl border border-white/[0.06] bg-gradient-to-b from-white/[0.03] to-transparent p-6 hover:border-white/[0.1] transition-all duration-300"
+              >
+                <div className="flex items-start gap-4">
+                  {/* Number badge */}
+                  <div className="w-8 h-8 rounded-xl bg-[#30D158]/10 border border-[#30D158]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-xs font-semibold text-[#30D158]">{section.number}</span>
+                  </div>
+
+                  <div className="flex-1 min-w-0">
+                    <h2 className="text-base font-semibold text-[#EDEDEF] mb-3 tracking-tight">
+                      {section.title}
+                    </h2>
+                    <div className="text-sm text-[#8A8F98] leading-relaxed [&_ul]:flex [&_ul]:flex-col [&_ul]:gap-1.5 [&_ul]:mt-1 [&_li]:flex [&_li]:items-start [&_li]:gap-2 [&_li]:before:content-['—'] [&_li]:before:text-[#30D158]/60 [&_li]:before:flex-shrink-0 [&_li]:before:mt-0 [&_p]:leading-relaxed">
+                      {section.content}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Bottom ornament */}
+          <div className="mt-12 flex items-center justify-center gap-4 opacity-30">
+            <div className="flex-1 h-px bg-gradient-to-r from-transparent to-[#30D158]/20" />
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+              <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" stroke="rgba(48,209,88,0.6)" strokeWidth="1" fill="none"/>
+            </svg>
+            <div className="flex-1 h-px bg-gradient-to-l from-transparent to-[#30D158]/20" />
+          </div>
+        </div>
+      </main>
+
+      <Footer />
+    </div>
+  );
+}

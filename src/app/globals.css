@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-deep: #020203;
+  --bg-base: #050506;
+  --bg-elevated: #0a0a0c;
+  --accent: #30D158;
+  --accent-bright: #34D862;
+  --foreground: #EDEDEF;
+  --foreground-muted: #8A8F98;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #050506;
+  color: #EDEDEF;
+  font-family: "Inter", "Geist Sans", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #050506;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(48, 209, 88, 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(48, 209, 88, 0.5);
+}
+
+/* Noise texture overlay */
+.noise-texture::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  opacity: 0.015;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Grid overlay */
+.grid-overlay::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 64px 64px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Islamic geometric pattern */
+.islamic-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='rgba(48,209,88,0.06)' stroke-width='0.5'%3E%3Cpolygon points='40,2 78,22 78,58 40,78 2,58 2,22'/%3E%3Cpolygon points='40,14 66,28 66,52 40,66 14,52 14,28'/%3E%3Cpolygon points='40,26 54,34 54,46 40,54 26,46 26,34'/%3E%3Cline x1='40' y1='2' x2='40' y2='26'/%3E%3Cline x1='78' y1='22' x2='54' y2='34'/%3E%3Cline x1='78' y1='58' x2='54' y2='46'/%3E%3Cline x1='40' y1='78' x2='40' y2='54'/%3E%3Cline x1='2' y1='58' x2='26' y2='46'/%3E%3Cline x1='2' y1='22' x2='26' y2='34'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(to bottom, #ffffff, rgba(255,255,255,0.95), rgba(255,255,255,0.7));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-accent {
+  background: linear-gradient(to right, #30D158, #4ade80, #30D158);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% center; }
+  100% { background-position: -200% center; }
+}
+
+/* Card spotlight effect */
+.card-spotlight {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-spotlight::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(48,209,88,0.06), transparent 40%);
+  opacity: 0;
+  transition: opacity 300ms;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.card-spotlight:hover::before {
+  opacity: 1;
+}
+
+/* Animated blob */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
+  33% { transform: translateY(-15px) rotate(0.5deg) scale(1.02); }
+  66% { transform: translateY(-8px) rotate(-0.5deg) scale(0.98); }
+}
+
+@keyframes float2 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(1deg); }
+}
+
+.animate-float-1 { animation: float 10s ease-in-out infinite; }
+.animate-float-2 { animation: float2 8s ease-in-out infinite; }
+.animate-float-3 { animation: float 12s ease-in-out infinite reverse; }
+
+/* Intersection observer fade-up */
+.fade-up-element {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fade-up-element.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Crescent moon SVG animation */
+@keyframes glow-pulse {
+  0%, 100% { filter: drop-shadow(0 0 8px rgba(48,209,88,0.4)); }
+  50% { filter: drop-shadow(0 0 16px rgba(48,209,88,0.7)); }
+}
+
+.glow-pulse { animation: glow-pulse 3s ease-in-out infinite; }
+
+/* Mosque map pin pulse */
+@keyframes map-ping {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(2.5); opacity: 0; }
+}
+
+.map-ping { animation: map-ping 2s ease-out infinite; }
+
+/* Border gradient */
+.border-gradient {
+  position: relative;
+}
+.border-gradient::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(to bottom, rgba(48,209,88,0.3), rgba(255,255,255,0.05));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-float-1,
+  .animate-float-2,
+  .animate-float-3,
+  .gradient-text-accent,
+  .glow-pulse,
+  .map-ping {
+    animation: none;
+  }
+  .fade-up-element {
+    opacity: 1;
+    transform: none;
+  }
+}
