@@ -322,67 +322,59 @@ export default function Screenshots() {
         </div>
 
         {/* Desktop: 3 phones */}
-        <div className="hidden sm:flex items-end justify-center gap-8 md:gap-14">
+        <div className="hidden sm:flex items-end justify-center gap-8 md:gap-12">
 
-          {/* Left — List screen */}
+          {/* Left */}
           <div
             className="fade-up-element flex flex-col items-center gap-3"
             style={{ transform: "rotate(-4deg)", transformOrigin: "bottom center" }}
           >
-            <PhoneFrame width={sideW}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/app-screen-list.png"
-                alt="Список мечетей в Sujud"
-                style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
-              />
-            </PhoneFrame>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/screen-2.png"
+              alt="Список мечетей в Sujud"
+              style={{ width: sideW, display: "block" }}
+            />
             <p className="text-xs font-medium" style={{ color: "#8A8F98" }}>Список мечетей</p>
           </div>
 
-          {/* Center — Map screen (featured) */}
+          {/* Center */}
           <div
             className="fade-up-element flex flex-col items-center gap-3"
             style={{ transform: "translateY(-20px)" }}
           >
-            <PhoneFrame width={featuredW} featured>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/app-screen-map.png"
-                alt="Карта мечетей в Sujud"
-                style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
-              />
-            </PhoneFrame>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/screen-1.png"
+              alt="Карта мечетей в Sujud"
+              style={{ width: featuredW, display: "block", filter: "drop-shadow(0 0 40px rgba(48,209,88,0.25))" }}
+            />
             <p className="text-xs font-medium" style={{ color: "#8A8F98" }}>Карта мечетей</p>
           </div>
 
-          {/* Right — Add screen */}
+          {/* Right */}
           <div
             className="fade-up-element flex flex-col items-center gap-3"
             style={{ transform: "rotate(4deg)", transformOrigin: "bottom center" }}
           >
-            <PhoneFrame width={sideW}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/app-screen-add.png"
-                alt="Добавление места в Sujud"
-                style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
-              />
-            </PhoneFrame>
-            <p className="text-xs font-medium" style={{ color: "#8A8F98" }}>Добавить место</p>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/screen-3.png"
+              alt="Детали мечети в Sujud"
+              style={{ width: sideW, display: "block" }}
+            />
+            <p className="text-xs font-medium" style={{ color: "#8A8F98" }}>Детали места</p>
           </div>
         </div>
 
         {/* Mobile: single phone */}
         <div className="sm:hidden flex flex-col items-center gap-3">
-          <PhoneFrame width={featuredW} featured>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/app-screen-map.png"
-              alt="Карта мечетей в Sujud"
-              style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
-            />
-          </PhoneFrame>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/screen-1.png"
+            alt="Карта мечетей в Sujud"
+            style={{ width: featuredW, display: "block" }}
+          />
           <p className="text-xs font-medium" style={{ color: "#8A8F98" }}>Карта мечетей</p>
         </div>
       </div>
