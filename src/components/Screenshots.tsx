@@ -332,7 +332,7 @@ export default function Screenshots() {
             style={{ transform: "rotate(-4deg)", transformOrigin: "bottom center" }}
           >
             <Image
-              src="/screen-2.jpg"
+              src="/screen-2.webp"
               alt="Список мечетей в Sujud"
               width={sideW}
               height={Math.round(sideW * (2868 / 1320))}
@@ -347,7 +347,7 @@ export default function Screenshots() {
             style={{ transform: "translateY(-20px)" }}
           >
             <Image
-              src="/screen-1.jpg"
+              src="/screen-1.webp"
               alt="Карта мечетей в Sujud"
               width={featuredW}
               height={Math.round(featuredW * (2868 / 1320))}
@@ -363,7 +363,7 @@ export default function Screenshots() {
             style={{ transform: "rotate(4deg)", transformOrigin: "bottom center" }}
           >
             <Image
-              src="/screen-3.jpg"
+              src="/screen-3.webp"
               alt="Детали мечети в Sujud"
               width={sideW}
               height={Math.round(sideW * (2868 / 1320))}
@@ -376,7 +376,7 @@ export default function Screenshots() {
         {/* Mobile: single phone */}
         <div className="sm:hidden flex flex-col items-center gap-3">
           <Image
-            src="/screen-1.jpg"
+            src="/screen-1.webp"
             alt="Карта мечетей в Sujud"
             width={featuredW}
             height={Math.round(featuredW * (2868 / 1320))}
