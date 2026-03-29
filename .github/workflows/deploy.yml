@@ -36,6 +36,7 @@ jobs:
             cd /var/www/sujud-landing
             git pull origin main
             npm ci --production=false
+            npm install sharp
             npm run build
             pm2 restart sujud-landing
             pm2 save
