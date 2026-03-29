@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -30,12 +31,13 @@ export default function Navbar() {
         {/* Logo */}
         <a href="/" className="flex items-center gap-2.5 group">
           <div className="w-9 h-9 rounded-[14px] overflow-hidden shadow-[0_0_16px_rgba(48,209,88,0.4)] group-hover:shadow-[0_0_24px_rgba(48,209,88,0.65)] transition-all duration-300 flex-shrink-0">
-            <img
-              src="/logo.png"
+            <Image
+              src="/logo-small.png"
               alt="Sujud logo"
               width={36}
               height={36}
               className="w-full h-full object-cover"
+              priority
             />
           </div>
           <span className="text-[#EDEDEF] font-semibold text-lg tracking-tight">Sujud</span>

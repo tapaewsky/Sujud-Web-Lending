@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Footer() {
   return (
     <footer className="relative border-t border-white/[0.06] bg-[#020203]">
@@ -11,8 +13,8 @@ export default function Footer() {
           <div className="flex flex-col items-center md:items-start gap-2">
             <div className="flex items-center gap-2.5">
               <div className="w-7 h-7 rounded-[10px] overflow-hidden shadow-[0_0_12px_rgba(48,209,88,0.4)] flex-shrink-0">
-                <img
-                  src="/logo.png"
+                <Image
+                  src="/logo-small.png"
                   alt="Sujud logo"
                   width={28}
                   height={28}

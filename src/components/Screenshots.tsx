@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 /* ─── Reusable toggle ────────────────────────────────── */
 function Toggle({ on = false }: { on?: boolean }) {
   return (
@@ -329,11 +331,12 @@ export default function Screenshots() {
             className="fade-up-element flex flex-col items-center gap-3"
             style={{ transform: "rotate(-4deg)", transformOrigin: "bottom center" }}
           >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/screen-2.png"
+            <Image
+              src="/screen-2.jpg"
               alt="Список мечетей в Sujud"
-              style={{ width: sideW, display: "block" }}
+              width={sideW}
+              height={Math.round(sideW * (2868 / 1320))}
+              style={{ display: "block" }}
             />
             <p className="text-xs font-medium" style={{ color: "#8A8F98" }}>Список мечетей</p>
           </div>
@@ -343,11 +346,13 @@ export default function Screenshots() {
             className="fade-up-element flex flex-col items-center gap-3"
             style={{ transform: "translateY(-20px)" }}
           >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/screen-1.png"
+            <Image
+              src="/screen-1.jpg"
               alt="Карта мечетей в Sujud"
-              style={{ width: featuredW, display: "block", filter: "drop-shadow(0 0 40px rgba(48,209,88,0.25))" }}
+              width={featuredW}
+              height={Math.round(featuredW * (2868 / 1320))}
+              style={{ display: "block", filter: "drop-shadow(0 0 40px rgba(48,209,88,0.25))" }}
+              priority
             />
             <p className="text-xs font-medium" style={{ color: "#8A8F98" }}>Карта мечетей</p>
           </div>
@@ -357,11 +362,12 @@ export default function Screenshots() {
             className="fade-up-element flex flex-col items-center gap-3"
             style={{ transform: "rotate(4deg)", transformOrigin: "bottom center" }}
           >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/screen-3.png"
+            <Image
+              src="/screen-3.jpg"
               alt="Детали мечети в Sujud"
-              style={{ width: sideW, display: "block" }}
+              width={sideW}
+              height={Math.round(sideW * (2868 / 1320))}
+              style={{ display: "block" }}
             />
             <p className="text-xs font-medium" style={{ color: "#8A8F98" }}>Детали места</p>
           </div>
@@ -369,11 +375,13 @@ export default function Screenshots() {
 
         {/* Mobile: single phone */}
         <div className="sm:hidden flex flex-col items-center gap-3">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/screen-1.png"
+          <Image
+            src="/screen-1.jpg"
             alt="Карта мечетей в Sujud"
-            style={{ width: featuredW, display: "block" }}
+            width={featuredW}
+            height={Math.round(featuredW * (2868 / 1320))}
+            style={{ display: "block" }}
+            priority
           />
           <p className="text-xs font-medium" style={{ color: "#8A8F98" }}>Карта мечетей</p>
         </div>
