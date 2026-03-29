@@ -336,7 +336,7 @@ export default function Screenshots() {
               alt="Список мечетей в Sujud"
               width={sideW}
               height={Math.round(sideW * (2868 / 1320))}
-              style={{ display: "block" }}
+              style={{ display: "block", mixBlendMode: "multiply" }}
             />
             <p className="text-xs font-medium" style={{ color: "#8A8F98" }}>Список мечетей</p>
           </div>
@@ -351,7 +351,7 @@ export default function Screenshots() {
               alt="Карта мечетей в Sujud"
               width={featuredW}
               height={Math.round(featuredW * (2868 / 1320))}
-              style={{ display: "block", filter: "drop-shadow(0 0 40px rgba(48,209,88,0.25))" }}
+              style={{ display: "block", mixBlendMode: "multiply" }}
               priority
             />
             <p className="text-xs font-medium" style={{ color: "#8A8F98" }}>Карта мечетей</p>
@@ -367,7 +367,7 @@ export default function Screenshots() {
               alt="Детали мечети в Sujud"
               width={sideW}
               height={Math.round(sideW * (2868 / 1320))}
-              style={{ display: "block" }}
+              style={{ display: "block", mixBlendMode: "multiply" }}
             />
             <p className="text-xs font-medium" style={{ color: "#8A8F98" }}>Детали места</p>
           </div>
@@ -380,7 +380,7 @@ export default function Screenshots() {
             alt="Карта мечетей в Sujud"
             width={featuredW}
             height={Math.round(featuredW * (2868 / 1320))}
-            style={{ display: "block" }}
+            style={{ display: "block", mixBlendMode: "multiply" }}
             priority
           />
           <p className="text-xs font-medium" style={{ color: "#8A8F98" }}>Карта мечетей</p>
