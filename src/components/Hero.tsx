@@ -259,7 +259,7 @@ export default function Hero() {
         {/* CTA Button */}
         <div className="flex flex-col items-center gap-3">
           <a
-            href="https://apps.apple.com"
+            href="https://apps.apple.com/ru/app/sujud/id6759537822"
             target="_blank"
             rel="noopener noreferrer"
             className="group relative inline-flex items-center gap-3 px-7 py-4 rounded-xl bg-[#30D158] hover:bg-[#34D862] text-white font-semibold text-base transition-all duration-200 shadow-[0_0_0_1px_rgba(48,209,88,0.5),0_4px_12px_rgba(48,209,88,0.4),inset_0_1px_0_0_rgba(255,255,255,0.2)] hover:shadow-[0_0_0_1px_rgba(104,114,217,0.6),0_8px_32px_rgba(48,209,88,0.5),inset_0_1px_0_0_rgba(255,255,255,0.25)] active:scale-[0.98] overflow-hidden"

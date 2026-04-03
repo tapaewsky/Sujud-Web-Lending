@@ -73,7 +73,7 @@ export default function FinalCTA() {
 
             <div className="flex flex-col items-center gap-4">
               <a
-                href="https://apps.apple.com"
+                href="https://apps.apple.com/ru/app/sujud/id6759537822"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-[#30D158] hover:bg-[#34D862] text-white font-semibold text-lg transition-all duration-200 shadow-[0_0_0_1px_rgba(48,209,88,0.5),0_4px_24px_rgba(48,209,88,0.5),0_0_80px_rgba(48,209,88,0.1),inset_0_1px_0_0_rgba(255,255,255,0.2)] hover:shadow-[0_0_0_1px_rgba(104,114,217,0.6),0_8px_40px_rgba(48,209,88,0.6),0_0_100px_rgba(48,209,88,0.15),inset_0_1px_0_0_rgba(255,255,255,0.25)] active:scale-[0.98] overflow-hidden"
