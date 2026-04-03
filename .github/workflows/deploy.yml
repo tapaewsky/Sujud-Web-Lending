@@ -37,9 +37,8 @@ jobs:
             set -e
             cd /var/www/sujud-landing
             git pull origin main
-            npm ci --production=false
-            npm install sharp
-            npm run build
+            NODE_OPTIONS="--max-old-space-size=512" npm ci --production=false
+            NODE_OPTIONS="--max-old-space-size=512" npm run build
             pm2 restart sujud-landing
             pm2 save
             echo "Deployed successfully at $(date)"
