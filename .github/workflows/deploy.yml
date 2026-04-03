@@ -46,7 +46,9 @@ jobs:
           script: |
             set -e
             cd /var/www/sujud-landing
-            npm ci --omit=dev
+            git pull origin main
+            npm ci
+            npm run build
             pm2 restart sujud-landing
             pm2 save
             echo "Deployed successfully at $(date)"
