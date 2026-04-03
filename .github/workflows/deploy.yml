@@ -26,19 +26,27 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Deploy to server via SSH
+      - name: Copy build to server via rsync
+        uses: burnett01/rsync-deployments@7.0.1
+        with:
+          switches: -avz --delete --exclude='.git' --exclude='node_modules'
+          path: .
+          remote_path: /var/www/sujud-landing
+          remote_host: ${{ secrets.SERVER_HOST }}
+          remote_user: ${{ secrets.SERVER_USER }}
+          remote_password: ${{ secrets.SERVER_PASSWORD }}
+
+      - name: Restart app via SSH
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USER }}
           password: ${{ secrets.SERVER_PASSWORD }}
-          command_timeout: 10m
+          command_timeout: 3m
           script: |
             set -e
             cd /var/www/sujud-landing
-            git pull origin main
-            NODE_OPTIONS="--max-old-space-size=512" npm ci --production=false
-            NODE_OPTIONS="--max-old-space-size=512" npm run build
+            npm ci --omit=dev
             pm2 restart sujud-landing
             pm2 save
             echo "Deployed successfully at $(date)"
