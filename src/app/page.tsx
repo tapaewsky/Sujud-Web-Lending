@@ -3,7 +3,6 @@ import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import About from "@/components/About";
 import Screenshots from "@/components/Screenshots";
-import SocialProof from "@/components/SocialProof";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 
@@ -26,8 +25,7 @@ export default function Home() {
         <Features />
         <About />
         <Screenshots />
-        <SocialProof />
-        <FinalCTA />
+<FinalCTA />
         <Footer />
       </div>
     </main>
